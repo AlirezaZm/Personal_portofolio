@@ -37,14 +37,15 @@ const LinkItem = ({href,path,children}) => {
     )
 }
 
-const navbar = props => {
+const Navbar = props => {
     const {path} = props
+    const bgColor = useColorModeValue('#ffffff40','#20202380')
     return (
         <Box
             position = 'fixed'
             as = 'nav'
             w = '100%'
-            bg = {useColorModeValue('#ffffff40','#20202380')}
+            bg = {bgColor}
             style = {{backdropFilter: 'blur(10px)'}}
             zIndex = {1}
             {...props}
@@ -110,4 +111,4 @@ const navbar = props => {
     )
 }
 
-export default navbar
+export default Navbar

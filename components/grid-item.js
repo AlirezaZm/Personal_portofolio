@@ -4,7 +4,7 @@ import {Box,Text,LinkBox,LinkOverlay, useColorModeValue} from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 
 
-export const GridItem = ({children,href,title,thumbnail}) => {
+export const GridItem = ({children,title,thumbnail}) => {
     return (
         <Box w='100%' align='center'>
             <LinkBox cursor='pointer'>

@@ -19,18 +19,16 @@ import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import {introduction} from '../constant/introduction'
 import { BioSection, BioYear } from '../components/bio'
-import {GridItem} from '../components/grid-item'
 import TextLink from '../components/textLink'
 import Layout from '../components/layouts/article'
 import {socialNetwok} from '../constant/socialNetwork'
-import {IoLogoGithub,IoLogoLinkedin} from 'react-icons/io5'
 
 const Page = () => {
     return(
         <Layout>
             <Container>
                 <Box mt={{base:7}} borderRadius='lg' bg={useColorModeValue('whiteAlpha.500','whiteAlpha.200')} p={3} mb={6} align='center'>
-                    Hello, I &apos;m a full-stack developer from Tabriz, Iran
+                    Hello, I &#39;m a full-stack developer from Tabriz, Iran
                 </Box>
                 <Box display={{md:'flex'}}>
                     <Box flexFlow={1}>
@@ -80,11 +78,11 @@ const Page = () => {
                     </BioSection>
                     <BioSection>
                         <BioYear>2016</BioYear>
-                        Completed the Bachelor's program at <TextLink href='https://tabrizu.ac.ir/en'>University of Tabriz</TextLink>
+                        Completed the Bachelor&#39;s program at <TextLink href='https://tabrizu.ac.ir/en'>University of Tabriz</TextLink>
                     </BioSection>
                     <BioSection>
                         <BioYear>2018</BioYear>
-                        Completed the Master's Program at <TextLink href='http://en.azaruniv.ac.ir/'>Azarbaijan Shahid Madani University
+                        Completed the Master&#39;s Program at <TextLink href='http://en.azaruniv.ac.ir/'>Azarbaijan Shahid Madani University
                         </TextLink> in the field of Artificial Intelligence
                     </BioSection>
                     <BioSection>
@@ -99,7 +97,7 @@ const Page = () => {
                     <List>
                        {socialNetwok.map((item) => {
                            return(
-                                <ListItem>
+                                <ListItem key={item.title}>
                                     <Link href={item.address} target='_blank' >
                                         <Button  variant='ghost' colorScheme='teal'
                                             leftIcon={<Icon as={item.icon}  />}
