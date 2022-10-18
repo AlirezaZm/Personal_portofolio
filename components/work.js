@@ -35,7 +35,7 @@ export const WorkImage = ({src,alt}) => {
 export const AspectWorkImage = ({src,alt}) => {
     return (
         <AspectRatio maxW="200px" ratio={0.5} my={4}>
-            <Image   borderRadius='lg' w='full' src={src} alt={alt} mb={4}  />
+            <Image  borderRadius='lg' w='full' src={src} alt={alt} mb={4}/>
         </AspectRatio>
     )
 }

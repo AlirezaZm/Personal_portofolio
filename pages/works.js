@@ -11,15 +11,20 @@ const Works  = () => {
                 <Heading as='h3' fontSize={20} mb={4}>
                     Works
                 </Heading>
-                <SimpleGrid columns={[2,2,2]} gap={8}>
+                <SimpleGrid columns={[1,2,2]} gap={8}>
                     <Section>
-                        <WorkGridItem id='inkdrop' title='Metro Tabriz'>
+                        <WorkGridItem id='metroTabriz' title='Metro Tabriz'>
                             A android-based app made for tabriz metro system
                         </WorkGridItem>
                     </Section>
                     <Section>
-                        <WorkGridItem id='inkdrop' title='inkDrop' >
-                            A markdown note-taking app
+                        <WorkGridItem id='azarFire' title='Azar Fire' >
+                            A custom dataset for fire detection based on surveillance cameras
+                        </WorkGridItem>
+                    </Section>
+                    <Section>
+                        <WorkGridItem id='paper' title='paper' >
+                            Fire detection for video surveillance applications using ICA K-medoids-based color model and efficient spatio-temporal visual features
                         </WorkGridItem>
                     </Section>
                 </SimpleGrid>

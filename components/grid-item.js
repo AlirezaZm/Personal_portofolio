@@ -35,11 +35,11 @@ export const WorkGridItem = ({children,id,title}) => {
                     bg = {useColorModeValue('#ffffff40','#20202380')}
                     style = {{backdropFilter: 'blur(10px)',display:'flex',
                     flexDirection:'column',justifyContent:'space-between',
-                    padding:'20px 20px',height:'150px'}}
+                    padding:'20px 20px',minHeight:'160px'}}
                     borderRadius = {10}
                     >
                     <LinkOverlay href={`/works/${id}`} >
-                            <Text mt={2} fontSize={20}>
+                            <Text mt={2} fontSize={21} fontWeight='bold' mb={5}>
                                 {title}
                             </Text>
                         </LinkOverlay>

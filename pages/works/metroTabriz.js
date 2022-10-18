@@ -1,10 +1,18 @@
 import { Container, Badge, Link,List,
     ListItem,
     SimpleGrid,
-    UnorderedList, } from "@chakra-ui/layout";
+    UnorderedList, Box } from "@chakra-ui/layout";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Title, Meta, AspectWorkImage } from "../../components/work";
 import Layout from "../../components/layouts/article";
+import Section from "../../components/section";
+import  styled  from "@emotion/styled";
+
+const HoverBox = styled.div`
+    &:hover{
+        transform : translateY(-20px)
+    }
+`
 
 const Work = () => {
     return(
@@ -31,15 +39,28 @@ const Work = () => {
                     <ListItem mt={4}>
                         <Meta>Features</Meta>
                         <UnorderedList  mt={4}>
-                            <ListItem>Support multi languages</ListItem>
+                            <ListItem>Support multi languages (Internationalization and localization)</ListItem>
                             <ListItem>Splash screen</ListItem>
-                            <ListItem>Gps-based nearest station to user finder</ListItem>
+                            <ListItem>Find nearest station based on gps data</ListItem>
+                            <ListItem>Implement custom drawer using react-navigation</ListItem>
                         </UnorderedList>
                     </ListItem>
                 </List>
-                <SimpleGrid columns = {[1,1,2]}>
-                    <AspectWorkImage alt='inkdrop' src='/images/works/metro.jpg' />
-                    <AspectWorkImage alt='inkdrop' src='/images/works/live_location.jpg' />
+                <SimpleGrid columns = {[1,2,2]} alignContent='center' mt={10}>
+                    <Box align='center' w='100%' >
+                        <Section>
+                            <HoverBox>
+                                <AspectWorkImage alt='inkdrop' src='/images/works/metro.jpg' />
+                            </HoverBox>
+                        </Section>
+                    </Box>
+                    <Box align='center' w='100%'>
+                        <Section>
+                            <HoverBox>
+                                <AspectWorkImage alt='inkdrop' src='/images/works/live_location.jpg' />
+                            </HoverBox>
+                        </Section> 
+                    </Box>
                 </SimpleGrid>
             </Container>
         </Layout>
