@@ -7,8 +7,8 @@ import Layout from '../components/layouts/article'
 const Works  = () => {
     return (
         <Layout>
-            <Container mt={10}>
-                <Heading as='h3' fontSize={20} mb={4}>
+            <Container mt={8}>
+                <Heading as='h3' fontSize={25} mb={8}>
                     Works
                 </Heading>
                 <SimpleGrid columns={[1,2,2]} gap={8}>

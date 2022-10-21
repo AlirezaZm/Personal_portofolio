@@ -35,7 +35,7 @@ const Work = () => {
                         <Meta>Used on</Meta>
                         <span>
                                 <Link href='https://www.sciencedirect.com/science/article/abs/pii/S0957417419302490'>
-                                    Paper`&apos;s Link< ExternalLinkIcon mx='2px'  />
+                                    Paper&apos;s Link< ExternalLinkIcon mx='2px'  />
                                 </Link>
                             </span>
                     </ListItem>

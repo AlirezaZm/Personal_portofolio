@@ -1,14 +1,13 @@
-import React from 'react'
 import { Container, Badge, Link,List,
     ListItem,
     SimpleGrid,
-    UnorderedList, Box } from "@chakra-ui/layout";
+    Text,
+     Box } from "@chakra-ui/layout";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { Title, Meta, AspectWorkImage } from "../../components/work";
+import { Title, Meta, CustomizeAspectWorkImage } from "../../components/work";
 import Layout from "../../components/layouts/article";
 import Section from "../../components/section";
 import  styled  from "@emotion/styled";
-import axios from 'axios';
 
 const HoverBox = styled.div`
     &:hover{
@@ -17,63 +16,55 @@ const HoverBox = styled.div`
 `
 
 const Work = () => {
-    const config = {
-        headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET"
-          }
-    }
-    React.useEffect(() => {
-        axios.get('https://www.sciencedirect.com/journal/expert-systems-with-applications',config)
-        .then(response => console.log(response))
-        .catch(err => console.log(err)) 
-    })
     return(
         <Layout title='Metro Tabriz'>
             <Container mt={10}>
                 <Title>
-                    Metro Tabriz
-                     <Badge>2022</Badge>
+                    Paper
+                     <Badge>2019</Badge>
                 </Title>
                 <p>
-                Lorem Ipsum is simply dummy text of the printing 
+                    A paper based on fire detection using surveillance camera videos which published on 
+                    Expert Systems with Applications.
                 </p>
                 <List ml={4} my={4}>
                     <ListItem>
-                        <Meta>Platform</Meta>
-                        <span>Android</span>
+                        <Meta>Title</Meta>
+                        <span>Fire detection for video surveillance applications using ICA K-medoids-based color model and efficient spatio-temporal visual features</span>
                     </ListItem>
                     <ListItem mt={4}>
                         <Meta>Website</Meta>
-                        <Link href='https://cafebazaar.ir/app/com.metrotabriz?l=en'>
-                            Cafe Bazaar < ExternalLinkIcon mx='2px'  />
+                        <Link href='https://www.sciencedirect.com/science/article/abs/pii/S0957417419302490' isExternal={true}>
+                            Link to publisher webiste < ExternalLinkIcon mx='2px'  />
                         </Link>
                     </ListItem>
                     <ListItem mt={4}>
-                        <Meta>Features</Meta>
-                        <UnorderedList  mt={4}>
-                            <ListItem>Support multi languages (Internationalization and localization)</ListItem>
-                            <ListItem>Splash screen</ListItem>
-                            <ListItem>Find nearest station based on gps data</ListItem>
-                            <ListItem>Implement custom drawer using react-navigation</ListItem>
-                        </UnorderedList>
+                        <Meta>Website</Meta>
+                        <Link href='https://www.sciencedirect.com/journal/expert-systems-with-applications' isExternal={true}>
+                            Journal home page < ExternalLinkIcon mx='2px'  />
+                        </Link>
                     </ListItem>
+                    <ListItem mt={4}>
+                        <Meta>Abstract</Meta>
+                        <Text align='justify'>Automated detection of fire flames in videos shot from a surveillance camera is an active research topic, as fire detection must be accurate and fast. The present study proposes and evaluates an efficient fire detection method. The contributions of this method lies in threefold: (1) a robust ICA (Imperialist Competitive Algorithm) K-medoids-based color model first is developed to reliably detect all candidate fire regions in a scene; (2) a motion-intensity-aware motion detection technique is introduced to simply extract the regions containing movement together with the motion intensity rate of every moving pixel, which are then used to analyze the characteristics of the fire; (3) a set of new spatio-temporal features having the distinct characteristics of fire flames are extracted from the candidate fire regions which are fed into a support vector machine classifier in order to distinguish real fire regions from non-real ones. The experimental results for a set of benchmark fire video datasets and videos provided in this research confirm that the proposed method outperforms state-of-the-art fire detection approaches, providing high detection accuracy and a low false detection rate.</Text>
+                    </ListItem>
+                    
                 </List>
-                <SimpleGrid columns = {[1,2,2]} alignContent='center' mt={10}>
-                    <Box align='center' w='100%' >
+                <SimpleGrid columns = {[1,1,1]} alignContent='center' mt={10}>
+                <Box align='center' w='100%'>
                         <Section>
                             <HoverBox>
-                                <AspectWorkImage alt='inkdrop' src='/images/works/metro.jpg' />
+                                <CustomizeAspectWorkImage maxW='500px' ratio={1.5} alt='inkdrop' src='/images/works/paper.png' />
                             </HoverBox>
-                        </Section>
-                    </Box>
+                        </Section> 
+                    </Box>      
                     <Box align='center' w='100%'>
                         <Section>
                             <HoverBox>
-                                <AspectWorkImage alt='inkdrop' src='/images/works/live_location.jpg' />
+                                <CustomizeAspectWorkImage maxW='500px' ratio={1.5} alt='inkdrop' src='/images/works/paper1.png' />
                             </HoverBox>
                         </Section> 
-                    </Box>
+                    </Box>      
                 </SimpleGrid>
             </Container>
         </Layout>

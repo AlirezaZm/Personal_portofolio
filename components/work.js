@@ -40,6 +40,13 @@ export const AspectWorkImage = ({src,alt}) => {
     )
 }
 
+export const CustomizeAspectWorkImage = ({src,alt,maxW,ratio}) => {
+    return (
+            <AspectRatio maxW={maxW} ratio={ratio} my={4}>
+                <Image  borderRadius='lg' w='full' src={src} alt={alt} mb={4}/>
+            </AspectRatio>    )
+}
+
 export const Meta = ({children})  => {
     return (
         <Badge colorScheme='green' mr={2}>
