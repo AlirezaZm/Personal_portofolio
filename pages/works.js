@@ -1,17 +1,22 @@
-import {Container,Heading,SimpleGrid} from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 import Layout from '../components/layouts/article'
 
-const Works  = () => {
+const Works = () => {
     return (
         <Layout>
             <Container mt={8}>
                 <Heading as='h3' fontSize={25} mb={8}>
                     Works
                 </Heading>
-                <SimpleGrid columns={[1,2,2]} gap={8}>
+                <SimpleGrid columns={[1, 2, 2]} gap={8}>
+                    <Section>
+                        <WorkGridItem id='mathustad' title='Mathustad'>
+                            A math content teaching platform
+                        </WorkGridItem>
+                    </Section>
                     <Section>
                         <WorkGridItem id='metroTabriz' title='Metro Tabriz'>
                             A android-based app made for tabriz metro system
