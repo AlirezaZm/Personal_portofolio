@@ -63,7 +63,7 @@ const Work = () => {
                     <Box align='center' w='100%'>
                         <Section>
                             <HoverBox>
-                                <CustomizeAspectWorkImage maxW='500px' ratio={2} alt='inkdrop' src='/images/works/mathustad_homepage.png' />
+                                <CustomizeAspectWorkImage maxW='500px' ratio={2} alt='inkdrop' src='/images/works/mathustad_homepage.PNG' />
                             </HoverBox>
                         </Section>
                     </Box>
